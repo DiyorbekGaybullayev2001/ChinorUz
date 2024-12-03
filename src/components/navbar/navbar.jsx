@@ -40,31 +40,32 @@ const Navbar = () => {
             <div className="container m-auto pt-[20px]">
                 <ul className="flex justify-between p-[20px]">
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold " href="#">Главная</a>
+                        <a className="hover:text-[#94C11F] font-semibold " href="/">Главная</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Каталог</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#book">Каталог</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Гарантии</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#garanty">Гарантии</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Продукты</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#product">Продукты</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">О компании</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#about">О компании</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Доставка</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#dastafka">Доставка</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Производство</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#works">Производство</a>
                     </li>
                     <li>
-                        <a className="hover:text-[#94C11F] font-semibold" href="#">Контакты</a>
+                        <a className="hover:text-[#94C11F] font-semibold" href="#footer">Контакты</a>
                     </li>
                 </ul>
             </div>
+
 
         </nav>
     )

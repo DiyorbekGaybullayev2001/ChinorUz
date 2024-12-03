@@ -163,7 +163,7 @@ const Catalog = () => {
   );
 
   return (
-    <div className="container mx-auto pt-[70px] px-4">
+    <div id="product" className="container mx-auto pt-[70px] px-4">
       <h2 className="text-xl sm:text-2xl md:text-[45px] font-bold text-center mb-4">
         Каталог готовых изделий
       </h2>

@@ -6,7 +6,7 @@ import imgs2 from '../about/imgs1.png'
 
 const About = () => {
   return (
-    <div className="container m-auto pt-[70px] px-5">
+    <div id="about" className="container m-auto pt-[70px] px-5">
       {/* Title Section */}
       <div className=" m-[5px]">
         <h1 className="text-[30px]  md:text-[50px] font-bold">О нас</h1>
