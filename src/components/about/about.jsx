@@ -6,14 +6,14 @@ import imgs2 from '../about/imgs1.png'
 
 const About = () => {
   return (
-    <div id="about" className="container m-auto pt-[70px] px-5">
+    <div id="about" className="container m-auto pt-[100px] px-5">
       {/* Title Section */}
       <div className=" m-[5px]">
         <h1 className="text-[30px]  md:text-[50px] font-bold">О нас</h1>
       </div>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <div className="bg-white rounded-lg shadow-md p-1 flex flex-col items-center">
             <p className="text-gray-700 text-[12px] sm:text-[15px] md:text-[18px]">
@@ -44,21 +44,21 @@ const About = () => {
         </div>
 
         <div className="bg-[#94C11F] p-[10px] rounded-lg shadow-lg">
-            <p className="text-[80px] font-serif">16</p>
+            <p className="text-[30px] sm:text-[50px] md:text-[70px] font-serif">16</p>
             <br />
-            <p className="text-[20px]">Лет опыта</p>
+            <p className="text-[17px] md:text-[20px]">Лет опыта</p>
+        </div>
+
+        <div className="bg-[#94C11F] p-[10px] rounded-lg shadow-lg w-full">
+            <p className="text-[30px] sm:text-[50px] md:text-[70px] font-serif">60.000+</p>
+            <br />
+            <p className="text-[17px] md:text-[20px]">Довольных клиентов</p>
         </div>
 
         <div className="bg-[#94C11F] p-[10px] rounded-lg shadow-lg">
-            <p className="text-[80px] font-serif">60.000+</p>
+            <p className="text-[30px] sm:text-[50px] md:text-[70px] font-serif">200+</p>
             <br />
-            <p className="text-[20px]">Довольных клиентов</p>
-        </div>
-
-        <div className="bg-[#94C11F] p-[10px] rounded-lg shadow-lg">
-            <p className="text-[80px] font-serif">200+</p>
-            <br />
-            <p className="text-[20px]">Видов продуктов</p>
+            <p className="text-[17px] md:text-[20px]">Видов продуктов</p>
         </div>    
 
       </div>

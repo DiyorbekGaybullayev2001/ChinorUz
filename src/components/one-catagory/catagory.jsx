@@ -31,8 +31,8 @@ const OneCatagory = () => {
     ];
   
     return (
-      <div className="max-w-6xl mx-auto pt-[70px]">
-        <h2 className="text-[45px] font-bold text-center mb-6">
+      <div className="max-w-6xl mx-auto pt-[70px] container p-[10px]">
+        <h2 className="text-[23px] sm:text-[35px] md:text-[45px] font-bold text-center mb-6">
           Производим 4 основных категории мебели
         </h2>
         <p className="text-center text-gray-600 mb-10">

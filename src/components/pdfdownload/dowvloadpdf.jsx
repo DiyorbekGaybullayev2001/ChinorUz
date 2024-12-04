@@ -6,14 +6,17 @@ import React from "react";
 
 const DownlaodPdf = () => {
   return (
-    <div id='download' className="container m-auto grid grid-cols-1 md:grid-cols-2 items-center">
-      <div id='book' className="text-center w-[50%] m-auto">
+    <div id='book' className="container m-auto grid grid-cols-1 md:grid-cols-2 items-center text-center p-[10px] pt-[100px]">
+      <div id='download' className="text-center w-[100%] m-auto ">
         {/* Title */}
-        <h2 className="text-3xl font-bold mb-4">200+ проектов в фото каталоге</h2>
+        <div>
+
+        <h2 className="text-lg md:text-3xl font-bold mb-4">200+ проектов в фото каталоге</h2>
         <p className="text-gray-700 mb-6">Скачайте прямо сейчас</p>
+        </div>
 
         {/* Form */}
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3  items-center gap-3 p-[10px]">
           {/* Name Input */}
           <input
             type="text"
@@ -27,16 +30,16 @@ const DownlaodPdf = () => {
             className="w-full sm:w-auto border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#94C11F]"
           />
           {/* Submit Button */}
-          <div className='w-[250px] px-4 py-3 '>
-            <a className=' px-4 py-3' href={pdf} download >
-              <button className=' w-[250px]   px-4 py-3 border bg-[#94C11F]  text-white font-semibold rounded-lg hover:bg-[#648b24] ml-[10px]'>СКАЧАТЬ КАТАЛОГ </button>
+          <div className='w-full mt-[15px] m-auto text-center'>
+            <a className='' href={pdf} download >
+              <button className=' w-full sm:w-auto px-4 py-2 border bg-[#94C11F]  text-white font-semibold rounded-lg hover:bg-[#648b24]'>СКАЧАТЬ КАТАЛОГ </button>
             </a>
           </div>
         </div>
       </div>
 
-      <div className='content-end flex justify-center text-right'>
-        <img className='' src={books} alt="book-pdf"/>
+      <div className='content-end flex justify-center w-full m-auto'>
+        <img className='w-full' src={books} alt="book-pdf"/>
       </div>
 
     </div>

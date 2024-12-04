@@ -163,7 +163,7 @@ const Catalog = () => {
   );
 
   return (
-    <div id="product" className="container mx-auto pt-[70px] px-4">
+    <div id="product" className="container mx-auto pt-[100px] px-4">
       <h2 className="text-xl sm:text-2xl md:text-[45px] font-bold text-center mb-4">
         Каталог готовых изделий
       </h2>
@@ -171,11 +171,11 @@ const Catalog = () => {
         которые можно купить здесь и сейчас
       </p>
 
-      <div className="flex justify-center space-x-4 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 space-x-4 mb-6">
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-md font-semibold ${
+            className={`px-4 py-2 rounded-md m-[10px] font-semibold ${
               activeCategory === category
                 ? "bg-[#94C11F] text-white"
                 : "bg-gray-200 text-black"
@@ -204,7 +204,7 @@ const Catalog = () => {
         ))}
       </div>
       <div className="container m-auto items-center text-center mt-[70px]">
-        <button className="bg-[#94C11F] w-[300px] h-[50px] text-white font-semibold  items-center rounded-xl">ПЕРЕЙТИ В КАТАЛОГ</button>
+        <button className="bg-[#94C11F] w-[200px] sm:w-[300px] h-[50px] text-white font-semibold  items-center rounded-xl">ПЕРЕЙТИ В КАТАЛОГ</button>
       </div>
     </div> 
   );

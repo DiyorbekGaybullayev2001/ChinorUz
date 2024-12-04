@@ -44,7 +44,7 @@ const Mebel = () => {
   ];
 
   return (
-    <div id="garanty" className=" container m-auto pt-[70px]">
+    <div id="garanty" className=" container m-auto pt-[70px] p-[10px]">
 
       <h2 className="md:text-[35px] font-serif ml-[10px]">С 2008 года мы сделали более</h2>
       <h2 className="md:text-[30px] font-serif ml-[10px]"><span className="text-[#94C11F]">100 000 единиц</span> мебели</h2>
@@ -69,7 +69,7 @@ const Mebel = () => {
       </div>
 
 
-      <div className="mt-[70px] text-center p-[50px]">
+      <div className="mt-[70px] text-center">
         <h1 className="md:text-[40px] font-semibold">Новая летняя коллекция от Chinar</h1>
         <h1 className="md:text-[40px] font-semibold"> для вашего дома и заведения</h1>
         <div className="mt-[30px] grid grid-flow-col">
