@@ -11,6 +11,7 @@ import mebel6 from '../imgs/mebel6.png'
 import mebel7 from '../imgs/mebel7.png'
 import mebel8 from '../imgs/mebel8.png'
 import mebel9 from '../imgs/mebel9.png'
+import { NavLink } from "react-router-dom";
 
 
 
@@ -203,9 +204,15 @@ const Catalog = () => {
           </div>
         ))}
       </div>
+
+
       <div className="container m-auto items-center text-center mt-[70px]">
-        <button className="bg-[#94C11F] w-[200px] sm:w-[300px] h-[50px] text-white font-semibold  items-center rounded-xl">ПЕРЕЙТИ В КАТАЛОГ</button>
+        <NavLink to="/katalogs">
+            <button  className="bg-[#94C11F] w-[200px] sm:w-[300px] h-[50px] text-white font-semibold  items-center rounded-xl">ПЕРЕЙТИ В КАТАЛОГ</button>
+        </NavLink>
       </div>
+
+
     </div> 
   );
 };

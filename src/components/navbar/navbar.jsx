@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from '../navbar/logo.png';
 import { FaTelegram, FaWhatsappSquare, FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,10 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white shadow-md fixed w-full z-50">
-            <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
+            <div className="container m-auto flex items-center justify-between py-2 px-4 md:px-8 ">
                 {/* Logo Section */}
                 <div className="flex items-center w-[250px]">
-                    <img className="h-9" src={logo} alt="Logo" />
+                    <img className="h-8" src={logo} alt="Logo" />
                     <p className="hidden sm:block text-xs italic ml-4">
                         Производство плетенной мебели премиум класса в Ташкенте
                     </p>
@@ -59,17 +60,19 @@ const Navbar = () => {
             {/* Navigation Links */}
             <div
                 className={`md:flex md:items-center md:justify-between bg-white md:static mb-3 absolute left-0 w-full md:w-auto transition-all duration-300 ${
-                    isMenuOpen ? "top-[70px] opacity-100" : "top-[-400px] opacity-0"
+                    isMenuOpen ? "top-[60px] opacity-100" : "top-[-400px] opacity-0"
                 } md:opacity-100`}
             >
-                <ul className="flex flex-col md:flex-row m-auto items-center space-y-4 md:space-y-0 md:space-x-14 py-4 md:py-0 px-4 md:px-0 ">
+                <ul className="flex flex-col md:flex-row m-auto items-center space-y-4 md:space-y-0 md:space-x-14 py-2 md:py-0 px-4 md:px-0 ">
                     <li>
-                        <a
+                        <NavLink
+
                             className="hover:text-[#94C11F] font-medium text-base"
-                            href="#menu"
+                            to="/menu"
                         >
                             Главная
-                        </a>
+                        </NavLink>
+                        
                     </li>
                     <li>
                         <a

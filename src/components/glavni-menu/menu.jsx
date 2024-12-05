@@ -7,7 +7,7 @@ import img3 from "../glavni-menu/img3.png";
 
 const MenuComponent = () => {
   return (
-    <div id="menu" className="container mx-auto h-full p-4 pt-[120px]">
+    <div id="menu" className="container mx-auto h-full p-4 pt-[60px] md:pt-[120px]">
       {/* Section 1: Text and Download */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-12">
         {/* Text Section */}
