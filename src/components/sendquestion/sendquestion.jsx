@@ -1,7 +1,40 @@
 import React, { useState } from "react";
+import axios from 'axios'
 import logo from '../navbar/logo.png'
 
 const SendQuestion = () => {
+
+    const [loading, setloading] = useState(false)
+
+
+    const SendMessage =(event) =>{
+        event.preventDefault();
+        setloading(true)
+        const token = "8127669466:AAFJr3Fa5QABvCbdyBhjcSRWorauL8TUhwc";
+        const chat_id = 6079644484;
+        const url = `https://api.telegram.org/bot${token}/SendMessage `;
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const quiz = document.getElementById("question").value;
+        const messageContent = `Ismi: ${name} \n Tel: ${phone} \n Savol: ${quiz}`
+
+        axios({
+            url:url,
+            method:'POST',
+            data:{
+                "chat_id":chat_id,
+                "text":messageContent
+            }
+        }).then((res)=>{
+            document.getElementById("myID").reset();
+
+            alert("Yuborildi")
+        }).catch((error)=>{
+            console.log("Error", error)
+        }).finally(()=>{
+            setloading(false)
+        })
+    }
 
     const [aktiv, setaktiv] = useState(false)
 
@@ -9,23 +42,26 @@ const SendQuestion = () => {
         setaktiv(!aktiv);
     };
 
+    
+
     return (
         <div className="container m-auto pt-[70px]">
             
-
-
             {
                 !aktiv ? 
                 <div className="m-auto text-center">
                     <h2 className="m-[10px] text-[25px] sm:text-[32px] md:text-[40px] font-serif">Остались вопросы? </h2>
                     <button onClick={toggleAktiv} className="bg-[#94C11F] rounded-lg px-[35px] py-[20px] hover:bg-[#93c11fd2] m-[10px] text-[20px] text-white">ЗАДАТЬ ВОПРОС</button>
                 </div>
-                : <div className="flex flex-col items-center justify-center min-h-screen  px-4 sm:px-6 lg:px-8 container">
+                : <div className="fixed inset-0 bg-[#616161bd]  flex flex-col m-auto items-center justify-center min-h-screen  px-4 sm:px-6 lg:px-8 ">
                 <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
                     {/* Header */}
-                    <div className="text-center mb-6">
+                    <div className="text-center mb-6 relative ">
+
+                        <button onClick={toggleAktiv} className="font-bold absolute z-50 right-1 top-0">✕</button>
+                        
                     <img
-                        src={logo} // O'zingizning logotip URL'ingizni kiriting
+                        src={logo}
                         alt="Logo"
                         className="  sm:h-20 mx-auto"
                     />
@@ -38,7 +74,7 @@ const SendQuestion = () => {
                     </div>
 
                     {/* Form */}
-                    <form className="space-y-4">
+                    <form id="myID" className="space-y-4" onSubmit={SendMessage}>
                     {/* Имя */}
                     <div>
                         <label
@@ -91,13 +127,16 @@ const SendQuestion = () => {
                         placeholder="Введите ваш вопрос"
                         ></textarea>
                     </div>
-
+                    {/* отправить вопрос */}
                     {/* Кнопка отправки */}
                     <button
-                        // type="submit"    
+                        loading={loading}
+                        type="submit"    
                         className="w-full bg-[#94C11F] text-white py-2 px-4 rounded-md hover:bg-[#93c11fcc] transition duration-300"
                     >
-                        отправить вопрос
+                        {
+                            loading ? "Oтправить вопрос...." : "Oтправить вопрос"
+                        }
                     </button>
                     </form>
 

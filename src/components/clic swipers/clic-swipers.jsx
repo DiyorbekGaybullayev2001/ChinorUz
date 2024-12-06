@@ -11,7 +11,7 @@ import imgs4 from '../clic swipers/swiperimg4.png'
 
 const ClicSwipers = () =>{
   return (
-    <div className='container m-auto pt-[150px]'>
+    <div className='container m-auto pt-[150px] relative z-0'>
             <Swiper
         spaceBetween={30}
         centeredSlides={true}

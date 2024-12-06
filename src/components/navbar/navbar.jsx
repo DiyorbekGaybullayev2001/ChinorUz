@@ -68,7 +68,7 @@ const Navbar = () => {
                         <NavLink
 
                             className="hover:text-[#94C11F] font-medium text-base"
-                            to="/menu"
+                            to="/"
                         >
                             Главная
                         </NavLink>

@@ -14,90 +14,49 @@ import DownlaodPdf from './components/pdfdownload/dowvloadpdf'
 import SendQuestion from './components/sendquestion/sendquestion'
 import Swipers from './components/swipers/swiper'
 
-import {BrowserRouter, Routes, Route , NavLink} from 'react-router-dom'
+import {BrowserRouter, Routes, Route ,} from 'react-router-dom'
 
-function App() {
-
+function Menu () {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/menu' element={<Navbar/>}/>
-      </Routes>
-      <Routes>
-        <Route path='/katalogs' element={<Navbar/>}/>
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Menucompanent/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<OneCatagory/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Catalog/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<About/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Mebel/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<DownlaodPdf/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Partners/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Swipers/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<FAQ/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<SendQuestion/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/menu' element={<Footer/>}/>,
-      </Routes>
-
-      <Routes>
-        <Route path='/katalogs' element={<ClicSwipers/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/katalogs' element={<ClicCatalog/>}/>,
-      </Routes>
-
-      <Routes>
-        <Route path='/katalogs' element={<FAQ/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/katalogs' element={<SendQuestion/>}/>,
-      </Routes>
-      <Routes>
-        <Route path='/katalogs' element={<Footer/>}/>,
-      </Routes>
-      
-    </BrowserRouter>
-    
-
-      {/* <Navbar/> */}
-      {/* <Menucompanent/> */}
-      {/* <OneCatagory/> */}
-      {/* <Catalog/> */}
-      {/* <About/> */}
-      {/* <Mebel/> */}
-      {/* <DownlaodPdf/> */}
-      {/* <Partners/> */}
-      {/* <Swipers/> */}
-      {/* <FAQ/> */}
-      {/* <SendQuestion/> */}
-      {/* <Footer/> */}
-
-      {/* <ClicSwipers/>
-      <ClicCatalog/> */}
+      <Navbar/>
+      <Menucompanent/>
+      <OneCatagory/>
+      <Catalog/>
+      <About/>
+      <Mebel/>
+      <DownlaodPdf/>
+      <Partners/>
+      <Swipers/>
+      <FAQ/>
+      <SendQuestion/>
+      <Footer/>
     </>
   )
+}
+
+function Katalogs () {
+  return(
+    <>
+      <Navbar/>
+      <ClicSwipers/>
+      <ClicCatalog/>
+      <FAQ/>
+      <SendQuestion/>
+      <Footer/>
+    </>
+  )
+}
+
+function App () {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        <Route path='/katalogs' element={<Katalogs/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App

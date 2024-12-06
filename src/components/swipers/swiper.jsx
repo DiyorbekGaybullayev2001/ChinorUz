@@ -31,7 +31,7 @@ const Swipers = () => {
                 <p className='text-[12px] md:text-[18px]'>Производство состоит из 7 этапов.</p>
             </div>
             
-            <div id='dastafka' className='mt-[5px]'>
+            <div id='dastafka' className='mt-[5px] relative z-0'>
                 <Swiper
                         slidesPerView={1}
                         spaceBetween={10}
