@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import logo from '../navbar/logo.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SendQuestion = () => {
 
@@ -28,7 +30,7 @@ const SendQuestion = () => {
         }).then((res)=>{
             document.getElementById("myID").reset();
 
-            alert("Yuborildi")
+            // alert("Yuborildi")
         }).catch((error)=>{
             console.log("Error", error)
         }).finally(()=>{
@@ -43,6 +45,7 @@ const SendQuestion = () => {
     };
 
     
+    const notify = () => toast.success("This is a toast notification !");
 
     return (
         <div className="container m-auto pt-[70px]">
@@ -83,7 +86,8 @@ const SendQuestion = () => {
                         >
                         Ваше имя
                         </label>
-                        <input
+                        <input 
+                        required
                         type="text"
                         id="name"
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:ring-green-500 focus:border-green-500"
@@ -104,6 +108,7 @@ const SendQuestion = () => {
                             +998
                         </span>
                         <input
+                            required
                             type="number"
                             id="phone"
                             className="mt-1 block w-full pl-12 border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:ring-green-500 focus:border-green-500"
@@ -121,6 +126,7 @@ const SendQuestion = () => {
                         Ваш вопрос
                         </label>
                         <textarea
+                        required
                         id="question"
                         rows="4"
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:ring-green-500 focus:border-green-500"
@@ -129,7 +135,9 @@ const SendQuestion = () => {
                     </div>
                     {/* отправить вопрос */}
                     {/* Кнопка отправки */}
+                    <ToastContainer />
                     <button
+                        onClick={notify}
                         loading={loading}
                         type="submit"    
                         className="w-full bg-[#94C11F] text-white py-2 px-4 rounded-md hover:bg-[#93c11fcc] transition duration-300"
