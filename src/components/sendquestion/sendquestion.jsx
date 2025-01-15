@@ -29,12 +29,14 @@ const SendQuestion = () => {
             }
         }).then((res)=>{
             document.getElementById("myID").reset();
-
             // alert("Yuborildi")
+            toast.success("Yuborildi")
         }).catch((error)=>{
-            console.log("Error", error)
+            // console.log("Error", error)
+            toast.error("Xato")
         }).finally(()=>{
             setloading(false)
+            setaktiv(false)
         })
     }
 
@@ -45,7 +47,6 @@ const SendQuestion = () => {
     };
 
     
-    const notify = () => toast.success("This is a toast notification !");
 
     return (
         <div className="container m-auto pt-[70px]">
@@ -135,9 +136,8 @@ const SendQuestion = () => {
                     </div>
                     {/* отправить вопрос */}
                     {/* Кнопка отправки */}
-                    <ToastContainer />
                     <button
-                        onClick={notify}
+                        // onClick={notify}
                         loading={loading}
                         type="submit"    
                         className="w-full bg-[#94C11F] text-white py-2 px-4 rounded-md hover:bg-[#93c11fcc] transition duration-300"
@@ -150,12 +150,13 @@ const SendQuestion = () => {
 
                     {/* Footer */}
                     <p className="text-sm text-center text-gray-500 mt-4">
-                    Ваши данные не будут переданы третьим лицам
+                       Ваши данные не будут переданы третьим лицам
                     </p>
                 </div>
               </div>
             }
 
+            <ToastContainer />
         </div>
     )
 }
